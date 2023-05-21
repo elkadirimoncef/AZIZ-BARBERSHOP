@@ -22,10 +22,10 @@ app.post("/inputemployee",async (req,res)=>{
   try{
     console.log(req.body);
    const {f_name,l_name,phone,adress,email,dob,speciality} = req.body;
-   const newTodo = await pool.query("INSERT INTO employee (f_name,l_name,phone,adress) VALUES($1,$2,$3,$4) RETURNING *",
+   const newEmployee = await pool.query("INSERT INTO employee (f_name,l_name,phone,adress) VALUES($1,$2,$3,$4) RETURNING *",
    [f_name,l_name,phone,adress] 
     );
-    res.json(newTodo.rows[0]);
+    res.json(newEmployee.rows[0]);
 
   }catch (err){
     console.error(err.message);
@@ -39,10 +39,10 @@ app.post("/inputbooking",async (req,res)=>{
   try{
     console.log(req.body);
    const {f_name,l_name,date,time,status} = req.body;
-   const newTodo = await pool.query("INSERT INTO appointment (f_name,l_name,date,time,status) VALUES($1,$2,$3,$4,$5) RETURNING *",
+   const newAppointment = await pool.query("INSERT INTO appointment (f_name,l_name,date,time,status) VALUES($1,$2,$3,$4,$5) RETURNING *",
    [f_name,l_name,date,time,status] 
     );
-    res.json(newTodo.rows[0]);
+    res.json(newAppointment.rows[0]);
 
   }catch (err){
     console.error(err.message);
@@ -57,8 +57,8 @@ app.post("/inputbooking",async (req,res)=>{
 app.get("/booking",async (req,res)=>{
   try{
     console.log(req.params);
-    const allTodos = await pool.query("SELECT * FROM appointment");
-    res.json(allTodos.rows);
+    const allAppointments = await pool.query("SELECT * FROM appointment");
+    res.json(allAppointments.rows);
     
   }catch (err){
     console.error(err.message);
@@ -101,8 +101,8 @@ app.put("/bookings/:id",async (req,res)=>{
   try{
     const {id} = req.params;
     const {description} = req.body;
-    const updateTodo = await pool.query("UPDATE appointement SET description = $1 WHERE id = $2",[description,id]);
-    res.json("Booking was updated");
+    const updateAppointment = await pool.query("UPDATE appointement SET description = $1 WHERE id = $2",[description,id]);
+    res.json("Appointment was updated");
   }catch (err){
     console.error(err.message);
   }
@@ -113,8 +113,8 @@ app.put("/bookings/:id",async (req,res)=>{
 app.delete("/bookings/:id",async (req,res)=>{
   try{
     const {id} = req.params;
-    const deleteTodo = await pool.query("DELETE FROM bokings WHERE id = $1",[id]);
-    res.json("Todo was deleted");
+    const deleteAppointment = await pool.query("DELETE FROM bokings WHERE id = $1",[id]);
+    res.json("Appointment was deleted");
   }catch (err){
     console.error(err.message);
   }
