@@ -1,12 +1,12 @@
 import React,{ Fragment , useEffect,useState} from "react";
 
-const ListTodos= () => {
-    const[todos,setTodos]=useState([])
-    const getTodos=async () => {
+const ListEmployees= () => {
+    const[employees,setEmployees]=useState([])
+    const getEmployees=async () => {
         try {
             const response = await fetch("http://localhost:3001/user_employee_data");
             const jsonData= await response.json();
-            setTodos(jsonData);
+            setEmployees(jsonData);
         }
         catch (err) {
             console.error(err.message);
@@ -16,7 +16,7 @@ const ListTodos= () => {
         getEmployees();
     },[]);
 
-    console.log(todos)
+    console.log(employees)
 
     
     return <fragment>
@@ -29,7 +29,6 @@ const ListTodos= () => {
         <th>Lastname</th>
         <th>Phone</th>
         <th>Adress</th>
-        <th>Email</th>
       </tr>
     </thead>
     <tbody>
@@ -39,15 +38,12 @@ const ListTodos= () => {
         <td>john@example.com</td>
       </tr>
       */}
-      {todos.map(todo =>(
+      {employees.map(employee =>(
             <tr>
-                <td>{todo.f_name}</td>
-                <td>{todo.l_name}</td>
-                <td>{todo.phone}</td>
-                <td>{todo.adress}</td>
-                <td>{todo.email}</td>
-                <td>{todo.dob}</td>
-                <td>{todo.speciality}</td>
+                <td>{employee.f_name}</td>
+                <td>{employee.l_name}</td>
+                <td>{employee.phone}</td>
+                <td>{employee.adress}</td>
             </tr>
         ))}
    
@@ -56,7 +52,7 @@ const ListTodos= () => {
   </table></div></fragment>;
 };
 
-export default ListTodos;
+export default ListEmployees;
 
 
     
