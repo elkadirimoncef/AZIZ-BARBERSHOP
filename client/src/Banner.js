@@ -11,7 +11,6 @@ const Banner = ({ title, subtitle, buttonText }) => {
       <div className="banner-content">
         <h2 className="banner-title">{title}</h2>
         <p className="banner-subtitle">{subtitle}</p>
-        <button className="banner-button">{buttonText}</button>
       </div>
     </div>
   );
