@@ -1,22 +1,22 @@
 import React,{ Fragment , useEffect,useState} from "react";
 
-const ListTodos= () => {
-    const[todos,setTodos]=useState([])
-    const getTodos=async () => {
+const ListAppointments= () => {
+    const[appointments,setAppointments]=useState([])
+    const getAppointments=async () => {
         try {
             const response = await fetch("http://localhost:3001/user_appointments_data");
             const jsonData= await response.json();
-            setTodos(jsonData);
+            setAppointments(jsonData);
         }
         catch (err) {
             console.error(err.message);
         }
     }
     useEffect(() => {
-        getTodos();
+        getAppointments();
     },[]);
 
-    console.log(todos)
+    console.log(appointments)
 
     
     return <fragment>
@@ -41,13 +41,13 @@ const ListTodos= () => {
         <td>john@example.com</td>
       </tr>
       */}
-      {todos.map(todo =>(
+      {appointments.map(appointment =>(
             <tr>
-                <td>{todo.f_name}</td>
-                <td>{todo.l_name}</td>
-                <td>{todo.date}</td>
-                <td>{todo.time}</td>
-                <td>{todo.status}</td>
+                <td>{appointment.f_name}</td>
+                <td>{appointment.l_name}</td>
+                <td>{appointment.date}</td>
+                <td>{appointment.time}</td>
+                <td>{appointment.status}</td>
             </tr>
         ))}
    
@@ -56,7 +56,7 @@ const ListTodos= () => {
   </table></div></fragment>;
 };
 
-export default ListTodos;
+export default ListAppointments;
 
 
     
