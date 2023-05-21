@@ -22,8 +22,8 @@ app.post("/inputemployee",async (req,res)=>{
   try{
     console.log(req.body);
    const {f_name,l_name,phone,adress,email,dob,speciality} = req.body;
-   const newTodo = await pool.query("INSERT INTO employee (f_name,l_name,phone,adress,email,dob,speciality) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *",
-   [f_name,l_name,phone,adress,email,dob,speciality] 
+   const newTodo = await pool.query("INSERT INTO employee (f_name,l_name,phone,adress) VALUES($1,$2,$3,$4) RETURNING *",
+   [f_name,l_name,phone,adress] 
     );
     res.json(newTodo.rows[0]);
 
@@ -50,21 +50,7 @@ app.post("/inputbooking",async (req,res)=>{
   }
 })
 
-//get employee info
 
-app.get("/employee_data",async (req,res)=>{
-  try{
-    console.log(req.params);
-    const allTodos = await pool.query("SELECT * FROM employee");
-    res.json(allTodos.rows);
-    
-  }catch (err){
-    console.error(err.message);
-
-  }
-}
-
-)
 
 //get all bookings
 
@@ -82,21 +68,6 @@ app.get("/booking",async (req,res)=>{
 
 )
 
-//get client info
-
-app.get("/cllient_info",async (req,res)=>{
-  try{
-    console.log(req.params);
-    const allTodos = await pool.query("SELECT * FROM patient");
-    res.json(allTodos.rows);
-    
-  }catch (err){
-    console.error(err.message);
-
-  }
-}
-
-)
 
 //login 
 
