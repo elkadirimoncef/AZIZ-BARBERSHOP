@@ -53,9 +53,6 @@ try {
         <th>Last name</th>
         <th>Phone</th>
         <th>Adress</th>
-        <th>Email</th>
-        <th>Date of Birth</th>
-        <th>Speciality</th>
       </tr>
     </thead>
     <tbody>
