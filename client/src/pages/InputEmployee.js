@@ -9,9 +9,6 @@ const InputEmployee = () => {
     const[l_name, setl_name] = useState("");
     const[phone, setphone] = useState("");
     const[adress, setadress] = useState("");
-    const[email, setemail] = useState("");
-    const[dob, setdob] = useState("");
-    const[speciality, setspeciality] = useState("");
 
     const onSubmitForm = async(e) => {
         e.preventDefault();
@@ -52,21 +49,7 @@ const InputEmployee = () => {
                     <h5>Enter adress:</h5>
                     <input type="text" className="form-control" value={adress}
                      onChange={e =>setadress(e.target.value)}/>
-                   
-                    <h5>Enter email:</h5>
-                    <input type="text" className="form-control" value={email}
-                     onChange={e =>setemail(e.target.value)}/>
-                   
-
-                    <h5>Enter date of birth:</h5>
-                    <input type="text" className="form-control" value={dob}
-                     onChange={e =>setdob(e.target.value)}/>
-                    
-                    <h5>Enter speciality:</h5>
-                    <input type="text" className="form-control" value={speciality}
-                     onChange={e =>setspeciality(e.target.value)}/>
-                     <h5>           </h5>
-                     
+                  
                     </div>
                     <p><button className="btn btn-success btn-sm">Add</button></p>
                     </div>
