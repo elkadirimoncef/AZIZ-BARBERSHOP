@@ -1,0 +1,31 @@
+body {
+  background-image: url("my_website_background.jpg");
+}
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(251, 248, 248);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(41, 80, 170);
+  text-align: left;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}

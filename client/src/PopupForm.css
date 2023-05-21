@@ -1,0 +1,56 @@
+/* PopUpForm.css */
+
+.popup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.popup-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.popup-form .form-group {
+  margin-bottom: 20px;
+}
+
+.popup-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-form .form-actions {
+  text-align: right;
+}
+
+.popup-form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.popup-form button:hover {
+  background-color: #0056b3;
+}
+
+.popup-form button:focus {
+  outline: none;
+}

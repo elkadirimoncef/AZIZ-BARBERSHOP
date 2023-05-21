@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.nav{
+    background-color: rgb(80, 162, 210);
+    color : white;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    gap :2 rem;
+    padding: 0 1rem;
+
+}
+
+.nav ul{
+    padding : 0;
+    margin : 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.site-title{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container {
+    margin: 1rem;
+    text-align: center;
+    
+}
+
+.nav a{
+    color : blue;
+    text-decoration: none;
+
+}

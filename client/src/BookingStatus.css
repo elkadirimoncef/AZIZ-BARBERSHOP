@@ -1,0 +1,48 @@
+.booking-status-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .booking-status-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .booking-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .booking-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .booking-result {
+    margin-top: 20px;
+  }
+  
+  .booking-result h3 {
+    font-size: 18px;
+  }
+  
+  .booking-result p {
+    margin-top: 10px;
+  }
+  
