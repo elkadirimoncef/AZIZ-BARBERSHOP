@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header">
       <div className="header-logo">
         <img src="logo.png" alt="Logo" className="logo-image" />
-        <h1 className="logo-text">Aziz Barber Shop</h1>
+        <h1 className="logo-text">Aziz Barbershop</h1>
       </div>
       <nav className="header-nav">
         <ul className="nav-list">
