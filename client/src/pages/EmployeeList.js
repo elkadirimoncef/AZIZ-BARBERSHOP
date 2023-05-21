@@ -13,7 +13,7 @@ const ListTodos= () => {
         }
     }
     useEffect(() => {
-        getTodos();
+        getEmployees();
     },[]);
 
     console.log(todos)
@@ -30,8 +30,6 @@ const ListTodos= () => {
         <th>Phone</th>
         <th>Adress</th>
         <th>Email</th>
-        <th>Date of Birth</th>
-        <th>Speciality</th>
       </tr>
     </thead>
     <tbody>
